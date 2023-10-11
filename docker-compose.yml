@@ -1,0 +1,20 @@
+# EDocker Compose File to install Ignition Designer
+version: "3"
+services:
+        # Ignition Gateway
+        gateway:
+                image: kcollins/ignition:8.1.31
+                ports:
+                        - 9088:8088
+                        - 9043:8043
+                volumes:
+                        - ignitionv1-data:/usr/local/bin/ignition/data
+                environment:
+                        - GATEWAY_MODULES_ENABLED=opc-ua,udp-tcp-drivers,modbus-driver-v2,tag-historian
+                        - ACCEPT_IGNITION_EULA="Y"
+                        - GATEWAY_ADMIN_USERNAME=admin
+                        - GATEWAY_ADMIN_PASSWORD=penn85
+                        - IGNITION_EDITION-full
+                        - GATE_MAX_MEMORY=4096
+volumes:
+        ignitionv1-data:
