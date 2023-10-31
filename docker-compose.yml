@@ -7,6 +7,7 @@ services:
                 ports:
                         - 9088:8088
                         - 9043:8043
+                restart: always
                 volumes:
                         - ignitionv1-data:/usr/local/bin/ignition/data
                 environment:
