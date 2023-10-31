@@ -14,7 +14,7 @@ services:
                         - ACCEPT_IGNITION_EULA="Y"
                         - GATEWAY_ADMIN_USERNAME=nlsadmin
                         - GATEWAY_ADMIN_PASSWORD=~1Q2w3e4R5t
-                        - IGNITION_EDITION-full
+                        - IGNITION_EDITION=full
                         - GATE_MAX_MEMORY=4096
 volumes:
         ignitionv1-data:
